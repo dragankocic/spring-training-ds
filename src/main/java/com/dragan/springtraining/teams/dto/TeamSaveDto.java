@@ -8,6 +8,8 @@ import java.util.List;
 public record TeamSaveDto(
         @Length(min = 3, max = 30, message = "City name must be between 3 and 30 characters")
         String city,
+
+        @Length(min = 3, max = 30, message = "Name must be between 3 and 30 characters")
         String name,
         List<Player> players
 ) {
